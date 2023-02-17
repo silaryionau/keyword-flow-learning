@@ -1,0 +1,9 @@
+{
+  "args": {},
+  "headers": {
+    "x-forwarded-proto": "https",
+    "host": "postman-echo.com",
+    "x-forwarded-port": "443"
+  },
+  "url": "https://postman-echo.com/get"
+}

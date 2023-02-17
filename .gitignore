@@ -1,0 +1,17 @@
+.idea/
+node_modules/
+reports/
+results/
+browserLogs/
+*.log
+package-lock.json
+storage.json
+failedScreenshots.json
+.vscode/
+allure-report/
+allure-results/
+logs/
+.tmp/
+*_diff.png
+*_actual.png
+coverage/

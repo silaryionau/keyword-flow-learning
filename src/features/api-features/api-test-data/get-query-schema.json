@@ -1,0 +1,144 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "readOnly": false,
+  "writeOnly": false,
+  "minProperties": 0,
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "additionalProperties": true,
+  "required": [
+    "args",
+    "headers",
+    "url"
+  ],
+  "properties": {
+    "args": {
+      "$id": "#/properties/args",
+      "type": "object",
+      "readOnly": false,
+      "writeOnly": false,
+      "minProperties": 0,
+      "title": "The Args Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "foo1": "bar1",
+          "foo2": "bar2"
+        }
+      ],
+      "additionalProperties": true,
+      "required": [
+        "foo1",
+        "foo2"
+      ],
+      "properties": {
+        "foo1": {
+          "$id": "#/properties/args/properties/foo1",
+          "type": "string",
+          "readOnly": false,
+          "writeOnly": false,
+          "minLength": 0,
+          "title": "The Foo1 Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "bar1"
+          ]
+        },
+        "foo2": {
+          "$id": "#/properties/args/properties/foo2",
+          "type": "string",
+          "readOnly": false,
+          "writeOnly": false,
+          "minLength": 0,
+          "title": "The Foo2 Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "bar2"
+          ]
+        }
+      }
+    },
+    "headers": {
+      "$id": "#/properties/headers",
+      "type": "object",
+      "readOnly": false,
+      "writeOnly": false,
+      "minProperties": 0,
+      "title": "The Headers Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "x-forwarded-proto": "https",
+          "x-forwarded-port": "443",
+          "host": "postman-echo.com"
+        }
+      ],
+      "additionalProperties": true,
+      "required": [
+        "x-forwarded-proto",
+        "host",
+        "x-forwarded-port"
+      ],
+      "properties": {
+        "x-forwarded-proto": {
+          "$id": "#/properties/headers/properties/x-forwarded-proto",
+          "type": "string",
+          "readOnly": false,
+          "writeOnly": false,
+          "minLength": 0,
+          "title": "The X-forwarded-proto Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "https"
+          ]
+        },
+        "host": {
+          "$id": "#/properties/headers/properties/host",
+          "type": "string",
+          "readOnly": false,
+          "writeOnly": false,
+          "minLength": 0,
+          "title": "The Host Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "postman-echo.com"
+          ]
+        },
+        "x-forwarded-port": {
+          "$id": "#/properties/headers/properties/x-forwarded-port",
+          "type": "string",
+          "readOnly": false,
+          "writeOnly": false,
+          "minLength": 0,
+          "title": "The X-forwarded-port Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "443"
+          ]
+        }
+      }
+    },
+    "url": {
+      "$id": "#/properties/url",
+      "type": "string",
+      "readOnly": false,
+      "writeOnly": false,
+      "minLength": 0,
+      "title": "The Url Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "https://postman-echo.com/get?foo1=bar1&foo2=bar2"
+      ]
+    }
+  }
+}

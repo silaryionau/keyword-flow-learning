@@ -1,0 +1,8 @@
+{
+  "string":	"String",
+  "number": 1234,
+  "obj": {"name": "Jones"},
+  "arr": [1,2,3,4],
+  "boolean": true,
+  "null": null 
+}

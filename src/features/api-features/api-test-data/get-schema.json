@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": [
+      "args",
+      "headers",
+      "url"
+  ],
+  "properties": {
+      "args": {
+          "$id": "#/properties/args",
+          "type": "object",
+          "title": "The Args Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+              {}
+          ]
+      },
+      "headers": {
+          "$id": "#/properties/headers",
+          "type": "object",
+          "title": "The Headers Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+              {
+                  "host": "postman-echo.com",
+                  "x-forwarded-proto": "https",
+                  "x-forwarded-port": "443"
+              }
+          ],
+          "required": [
+              "x-forwarded-proto",
+              "host",
+              "x-forwarded-port"
+          ],
+          "properties": {
+              "x-forwarded-proto": {
+                  "$id": "#/properties/headers/properties/x-forwarded-proto",
+                  "type": "string",
+                  "title": "The X-forwarded-proto Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "https"
+                  ]
+              },
+              "host": {
+                  "$id": "#/properties/headers/properties/host",
+                  "type": "string",
+                  "title": "The Host Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "postman-echo.com"
+                  ]
+              },
+              "x-forwarded-port": {
+                  "$id": "#/properties/headers/properties/x-forwarded-port",
+                  "type": "string",
+                  "title": "The X-forwarded-port Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "443"
+                  ]
+              }
+          }
+      },
+      "url": {
+          "$id": "#/properties/url",
+          "type": "string",
+          "title": "The Url Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+              "https://postman-echo.com/get"
+          ]
+      }
+  }
+}

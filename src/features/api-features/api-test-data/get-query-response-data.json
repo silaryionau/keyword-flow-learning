@@ -1,0 +1,12 @@
+{
+  "args": {
+    "foo1": "bar1",
+    "foo2": "bar2"
+  },
+  "headers": {
+    "x-forwarded-proto": "https",
+    "host": "postman-echo.com",
+    "x-forwarded-port": "443"
+  },
+  "url": "https://postman-echo.com/get?foo1=bar1&foo2=bar2"
+}

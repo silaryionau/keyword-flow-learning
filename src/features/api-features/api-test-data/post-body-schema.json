@@ -1,0 +1,299 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "readOnly": false,
+  "writeOnly": false,
+  "minProperties": 0,
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "additionalProperties": true,
+  "required": [
+    "args",
+    "data",
+    "files",
+    "form",
+    "headers",
+    "json",
+    "url"
+  ],
+  "properties": {
+    "args": {
+      "$id": "#/properties/args",
+      "type": "object",
+      "readOnly": false,
+      "writeOnly": false,
+      "minProperties": 0,
+      "title": "The Args Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {}
+      ],
+      "additionalProperties": true
+    },
+    "data": {
+      "$id": "#/properties/data",
+      "type": "object",
+      "readOnly": false,
+      "writeOnly": false,
+      "minProperties": 0,
+      "title": "The Data Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "description": "Test Description",
+          "title": "Test Post Request with Form Data",
+          "date": "2020-03-03T00:00:00.000Z"
+        }
+      ],
+      "additionalProperties": true,
+      "required": [
+        "title",
+        "description",
+        "date"
+      ],
+      "properties": {
+        "title": {
+          "$id": "#/properties/data/properties/title",
+          "type": "string",
+          "readOnly": false,
+          "writeOnly": false,
+          "minLength": 0,
+          "title": "The Title Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Test Post Request with Form Data"
+          ]
+        },
+        "description": {
+          "$id": "#/properties/data/properties/description",
+          "type": "string",
+          "readOnly": false,
+          "writeOnly": false,
+          "minLength": 0,
+          "title": "The Description Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Test Description"
+          ]
+        },
+        "date": {
+          "$id": "#/properties/data/properties/date",
+          "type": "string",
+          "readOnly": false,
+          "writeOnly": false,
+          "minLength": 0,
+          "title": "The Date Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "2020-03-03T00:00:00.000Z"
+          ]
+        }
+      }
+    },
+    "files": {
+      "$id": "#/properties/files",
+      "type": "object",
+      "readOnly": false,
+      "writeOnly": false,
+      "minProperties": 0,
+      "title": "The Files Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {}
+      ],
+      "additionalProperties": true
+    },
+    "form": {
+      "$id": "#/properties/form",
+      "type": "object",
+      "readOnly": false,
+      "writeOnly": false,
+      "minProperties": 0,
+      "title": "The Form Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {}
+      ],
+      "additionalProperties": true
+    },
+    "headers": {
+      "$id": "#/properties/headers",
+      "type": "object",
+      "readOnly": false,
+      "writeOnly": false,
+      "minProperties": 0,
+      "title": "The Headers Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "x-forwarded-proto": "https",
+          "x-forwarded-port": "443",
+          "host": "postman-echo.com",
+          "content-length": "111",
+          "content-type": "application/json"
+        }
+      ],
+      "additionalProperties": true,
+      "required": [
+        "x-forwarded-proto",
+        "host",
+        "content-length",
+        "content-type",
+        "x-forwarded-port"
+      ],
+      "properties": {
+        "x-forwarded-proto": {
+          "$id": "#/properties/headers/properties/x-forwarded-proto",
+          "type": "string",
+          "readOnly": false,
+          "writeOnly": false,
+          "minLength": 0,
+          "title": "The X-forwarded-proto Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "https"
+          ]
+        },
+        "host": {
+          "$id": "#/properties/headers/properties/host",
+          "type": "string",
+          "readOnly": false,
+          "writeOnly": false,
+          "minLength": 0,
+          "title": "The Host Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "postman-echo.com"
+          ]
+        },
+        "content-length": {
+          "$id": "#/properties/headers/properties/content-length",
+          "type": "string",
+          "readOnly": false,
+          "writeOnly": false,
+          "minLength": 0,
+          "title": "The Content-length Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "111"
+          ]
+        },
+        "content-type": {
+          "$id": "#/properties/headers/properties/content-type",
+          "type": "string",
+          "readOnly": false,
+          "writeOnly": false,
+          "minLength": 0,
+          "title": "The Content-type Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "application/json"
+          ]
+        },
+        "x-forwarded-port": {
+          "$id": "#/properties/headers/properties/x-forwarded-port",
+          "type": "string",
+          "readOnly": false,
+          "writeOnly": false,
+          "minLength": 0,
+          "title": "The X-forwarded-port Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "443"
+          ]
+        }
+      }
+    },
+    "json": {
+      "$id": "#/properties/json",
+      "type": "object",
+      "readOnly": false,
+      "writeOnly": false,
+      "minProperties": 0,
+      "title": "The Json Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "description": "Test Description",
+          "title": "Test Post Request with Form Data",
+          "date": "2020-03-03T00:00:00.000Z"
+        }
+      ],
+      "additionalProperties": true,
+      "required": [
+        "title",
+        "description",
+        "date"
+      ],
+      "properties": {
+        "title": {
+          "$id": "#/properties/json/properties/title",
+          "type": "string",
+          "readOnly": false,
+          "writeOnly": false,
+          "minLength": 0,
+          "title": "The Title Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Test Post Request with Form Data"
+          ]
+        },
+        "description": {
+          "$id": "#/properties/json/properties/description",
+          "type": "string",
+          "readOnly": false,
+          "writeOnly": false,
+          "minLength": 0,
+          "title": "The Description Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Test Description"
+          ]
+        },
+        "date": {
+          "$id": "#/properties/json/properties/date",
+          "type": "string",
+          "readOnly": false,
+          "writeOnly": false,
+          "minLength": 0,
+          "title": "The Date Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "2020-03-03T00:00:00.000Z"
+          ]
+        }
+      }
+    },
+    "url": {
+      "$id": "#/properties/url",
+      "type": "string",
+      "readOnly": false,
+      "writeOnly": false,
+      "minLength": 0,
+      "title": "The Url Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "https://postman-echo.com/post"
+      ]
+    }
+  }
+}
