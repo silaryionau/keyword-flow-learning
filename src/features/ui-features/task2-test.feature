@@ -31,6 +31,6 @@ Feature: Task 2 scenarious
             And User presses Enter key
             And User clicks [Submit Excersice button] "createExerciseForm|submitExerciseBtn"
         Then User verifies each element in [Logged Exercises Table Title] "loggedExercisesTable|tableTitle" is "present"
-            And [Logged Exercises] table "loggedExercisesTable|tableLoc" data contains values:
+            And [Logged Exercises Table] table "loggedExercisesTable|tableLoc" data contains values:
             | Username | Description            | Duration | Date       |
             | Anton    | description 17.02.2023 | 10       | 2023-02-01 |
