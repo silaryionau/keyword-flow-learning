@@ -1,7 +1,7 @@
 @task2
 Feature: Task 2 scenarious
     Background: Navigate to url and click create Excercise log button
-        Given User navigates to "http://localhost:3000"
+        Given User navigates to "ExcerTracker"
         When User clicks [Create Excersice button] "navigationBar|createExerciseBtn"
             And User waits 3 seconds
 

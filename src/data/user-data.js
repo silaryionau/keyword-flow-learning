@@ -20,6 +20,9 @@ module.exports = {
       AWS: 'https://app.ilead.io/',
       QA: 'https://app.ilead.io/'
     },
+    ExcerTracker: {
+      LOCAL: 'http://localhost:3000/'
+    },
     Isaac_Newton: {
       LOCAL: 'Isaac_Newton'
     },
