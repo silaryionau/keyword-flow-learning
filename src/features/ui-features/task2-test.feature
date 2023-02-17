@@ -3,7 +3,7 @@ Feature: Task 2 scenarious
     Background: Navigate to url and click create Excercise log button
         Given User navigates to "http://localhost:3000"
         When User clicks [Create Excersice button] "li[data-ta*='create-exercise']"
-        And User waits 3 seconds
+            And User waits 3 seconds
 
     Scenario: Check user is able to select User from dropdown
         When User selects item "option" with text "Anton" from [Username Dropdown] "select[data-ta='selectUser']"
@@ -12,7 +12,7 @@ Feature: Task 2 scenarious
     Scenario: Date picker exists and able to select data
         When User clicks [Date field] "div[data-ta='date'] input"
         Then User verifies each element in [Date Picker] "div[class='react-datepicker']" is "present"
-        When User clicks [Current Day] "//div[@role='option' and text()='16']"
+        When User clicks [Date Picker Day] "div[role=option]" with text "16"
         Then [Date field] "div[data-ta='date'] input" input text is equal to "02/16/2023"
 
     Scenario: Submit is disabled when required fields are not filled
