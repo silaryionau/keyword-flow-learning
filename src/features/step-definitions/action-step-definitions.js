@@ -6,13 +6,13 @@
  * stringHelper -> contains methods to work with string.
  * endpointHelper -> contains methods to work with GET & POST requests.
  */
-const fs = require("fs");
-const { When, setDefaultTimeout } = require("@cucumber/cucumber");
-const { elementHelper, dataStoreHelper } = require("keywordflow-wdio-js-lib");
-const pageObjects = require("../../data/pages-enum");
+const fs = require('fs');
+const { When, setDefaultTimeout } = require('@cucumber/cucumber');
+const { elementHelper, dataStoreHelper } = require('keywordflow-wdio-js-lib');
+const pageObjects = require('../../data/pages-enum');
 const {
-  getElement,
-} = require("keywordflow-wdio-js-lib/helpers/element-helper");
+    getElement,
+} = require('keywordflow-wdio-js-lib/helpers/element-helper');
 
 setDefaultTimeout(300 * 1000);
 
@@ -31,61 +31,64 @@ setDefaultTimeout(300 * 1000);
  * @param url should be named as in user-data.js
  */
 When('User logs in as {user} on {landing-url}', async function (user, url) {
-  const login = user.login;
-  const password = user.password;
+    const login = user.login;
+    const password = user.password;
 
-  await browser.url(url);
+    await browser.url(url);
 
-  const loginInput = await elementHelper.getElement(
-    pageObjects.loginPage.loginInput
-  );
-  await loginInput.addValue(login);
+    const loginInput = await elementHelper.getElement(
+        pageObjects.loginPage.loginInput
+    );
+    await loginInput.addValue(login);
 
-  const passwordInput = await elementHelper.getElement(
-    pageObjects.loginPage.passwordInput
-  );
-  await passwordInput.addValue(password);
+    const passwordInput = await elementHelper.getElement(
+        pageObjects.loginPage.passwordInput
+    );
+    await passwordInput.addValue(password);
 
-  const loginButton = await elementHelper.getElement(
-    pageObjects.loginPage.loginButton
-  );
+    const loginButton = await elementHelper.getElement(
+        pageObjects.loginPage.loginButton
+    );
 
-  return await loginButton.click();
+    return await loginButton.click();
 });
 
 // Need to call this step to start requests intercepting after any action
 When('User starts itersepting API', async function () {
-  return browser.setupInterceptor();
+    return browser.setupInterceptor();
 });
 
 When(
-  'User dragAndDrop {detail} {locator} to {detail} {locator} with execute script',
-  async function (_, dragElement, __, destinationElement) {
-    try {
-      const dndScript = fs.readFileSync("./src/utils/dnd-util.js", "utf8");
-      await browser.execute(
-        dndScript +
-          `$('${dragElement}').simulateDragDrop({ dropTarget: '${destinationElement}'});`
-      );
-    } catch (err) {
-      console.error(err);
-    }
+    'User dragAndDrop {detail} {locator} to {detail} {locator} with execute script',
+    async function (_, dragElement, __, destinationElement) {
+        try {
+            const dndScript = fs.readFileSync(
+                './src/utils/dnd-util.js',
+                'utf8'
+            );
+            await browser.execute(
+                dndScript +
+                    `$('${dragElement}').simulateDragDrop({ dropTarget: '${destinationElement}'});`
+            );
+        } catch (err) {
+            console.error(err);
+        }
 
-    return;
-  }
+        return;
+    }
 );
 
 When('User remembers {string} as {text}', async (parameter, value) => {
-  dataStoreHelper.setData(parameter, value);
+    dataStoreHelper.setData(parameter, value);
 
-  return;
+    return;
 });
 
 When('Create new User with name {string}', async (username) => {
-  let usernameEle = await elementHelper.getElement("input[data-ta=username]");
-  let submitBtn = await elementHelper.getElement(
-    "input[data-ta=submit_username]"
-  );
-  await usernameEle.addValue(username);
-  await submitBtn.click();
+    let usernameEle = await elementHelper.getElement('input[data-ta=username]');
+    let submitBtn = await elementHelper.getElement(
+        'input[data-ta=submit_username]'
+    );
+    await usernameEle.addValue(username);
+    await submitBtn.click();
 });
