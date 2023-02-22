@@ -37,6 +37,8 @@
     "test-smoke-headless": "wdio wdio.ci.conf.js --instances=3 --tag=@smoke --HEADLESS=true",
     "test-aws": "wdio wdio.conf.aws.js",
     "test-task2": "wdio wdio.local.conf.js --tag=@task2 --instances=1",
+    "test-local-e2e": "wdio wdio.local.conf.js --tag=@e2e --instances=1",
+    "test-local-functional": "wdio wdio.local.conf.js --tag=@functional --instances=1",
     "updateScreenshots": "node ./update-screenshots.js all",
     "allure:generate": "allure generate results -o ../locators-hotspots-chrome-plugin-master/allure-report --clean",
     "allure:open": "allure generate results -o results/allure-report --clean && allure open results/allure-report"

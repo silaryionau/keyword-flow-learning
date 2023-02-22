@@ -20,6 +20,9 @@ module.exports = {
       AWS: 'https://app.ilead.io/',
       QA: 'https://app.ilead.io/'
     },
+    ExcerTracker: {
+      LOCAL: 'http://localhost:3000/'
+    },
     Isaac_Newton: {
       LOCAL: 'Isaac_Newton'
     },
@@ -32,7 +35,7 @@ module.exports = {
       LOCAL: 'https://www.wikipedia.org/',
     },
     BASE_API_URL: {
-      LOCAL: 'https://postman-echo.com'
+      LOCAL: 'http://localhost:5001'
     },
     MOCK_SERVICE: {
       LOCAL: 'http://localhost:3036/api/scenario/'
