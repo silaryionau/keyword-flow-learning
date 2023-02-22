@@ -5,22 +5,22 @@ Feature: Task 2 scenarious
         When User clicks [Create Excersice button] "navigationBar|createExerciseBtn"
             And User waits 3 seconds
 
-    # Scenario: Check user is able to select User from dropdown
-    #     When User selects item "createExerciseForm|drpOptionLoc" with text "Anton" from [Username Dropdown] "createExerciseForm|usernameDrp"
-    #     Then User verifies default selected option in [Select User Dropdown] "createExerciseForm|usernameDrp" dropdown is equal to "Anton"
+    Scenario: Check user is able to select User from dropdown
+      When User selects item "createExerciseForm|drpOptionLoc" with text "Anton" from [Username Dropdown] "createExerciseForm|usernameDrp"
+        Then User verifies default selected option in [Select User Dropdown] "createExerciseForm|usernameDrp" dropdown is equal to "Anton"
 
-    # Scenario: Date picker exists and able to select data
-    #     When User clicks [Date field] "createExerciseForm|dateInput"
-    #     Then User verifies each element in [Date Picker] "datePicker|datePickerLoc" is "present"
-    #     When User clicks [Date Picker Day Option] "datePicker|commonDayLoc" with text "16"
-    #     Then [Date field] "createExerciseForm|dateInput" input text is equal to "02/16/2023"
+    Scenario: Date picker exists and able to select data
+         When User clicks [Date field] "createExerciseForm|dateInput"
+         Then User verifies each element in [Date Picker] "datePicker|datePickerLoc" is "present"
+         When User clicks [Date Picker Day Option] "datePicker|commonDayLoc" with text "16"
+         Then [Date field] "createExerciseForm|dateInput" input text is equal to "02/16/2023"
 
-    # Scenario: Submit is disabled when required fields are not filled
-    #     Then User verifies each element in [Submit Excersice button] "createExerciseForm|submitExerciseBtn" is "disabled"
+    Scenario: Submit is disabled when required fields are not filled
+        Then User verifies each element in [Submit Excersice button] "createExerciseForm|submitExerciseBtn" is "disabled"
 
-    # Scenario: Check description And Duration fields exist
-    #     Then User verifies each element in [Description field] "createExerciseForm|descriptionInput" is "present"
-    #         And User verifies each element in [Duration field] "createExerciseForm|durationInput" is "present"
+    Scenario: Check description And Duration fields exist
+        Then User verifies each element in [Description field] "createExerciseForm|descriptionInput" is "present"
+           And User verifies each element in [Duration field] "createExerciseForm|durationInput" is "present"
 
     Scenario: E2E - Create new exercise for client with
         When User selects item "createExerciseForm|drpOptionLoc" with text "Anton" from [Username Dropdown] "createExerciseForm|usernameDrp"
