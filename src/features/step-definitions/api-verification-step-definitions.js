@@ -318,6 +318,7 @@ Then('User verifies response contains property {text} in {text} with value {text
  */
 Then('User verifies response does not contain property {text} in {text} with value {text}', async (propertyName, responseElement, expectedValue) => {
   const pathQuery = `$.${responseElement}[?(@.${propertyName}=='${expectedValue}')]`;
+  
   const response = dataStoreHelper.getData('response');
 
   return expect((await utils.getValueOfPropertyFromJson(response, pathQuery)), `Response contains value: ${expectedValue}`).to.be.undefined;
