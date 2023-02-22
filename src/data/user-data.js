@@ -35,7 +35,7 @@ module.exports = {
       LOCAL: 'https://www.wikipedia.org/',
     },
     BASE_API_URL: {
-      LOCAL: 'https://postman-echo.com'
+      LOCAL: 'http://localhost:5001'
     },
     MOCK_SERVICE: {
       LOCAL: 'http://localhost:3036/api/scenario/'
