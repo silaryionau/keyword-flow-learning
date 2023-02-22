@@ -16,8 +16,8 @@ switch (common_config.params.browser) {
     if (common_config.params.DEVICE_TYPE === 'mobile') {
       capability = { ...chromeCapabilities };
       capability['goog:chromeOptions'].mobileEmulation = {
-        deviceName: common_config.params.DEVICE_NAME
-      }
+        deviceName: common_config.params.DEVICE_NAME,
+      };
     }
     break;
   case 'firefox':
@@ -30,24 +30,24 @@ switch (common_config.params.browser) {
     break;
 }
 
-
-
 exports.config = Object.assign({}, common_config, {
-  capabilities: [{
-    ...capability,
-    'cjson:metadata': {
-      // For a browser
-      browser: {
-        name: 'chrome',
-        version: '99',
+  capabilities: [
+    {
+      ...capability,
+      'cjson:metadata': {
+        // For a browser
+        browser: {
+          name: 'chrome',
+          version: '99',
+        },
+        device: 'Laptop',
+        platform: {
+          name: 'Windows',
+          version: '10.0.19043',
+        },
       },
-      device: 'Laptop',
-      platform: {
-        name: 'Windows',
-        version: '10.0.19043'
-      }
-    }
-  }],
+    },
+  ],
   // Used for library tests
-  specs: ['src/features/**/*.feature']
+  specs: ['src/features/**/*.feature'],
 });
