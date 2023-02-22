@@ -1,4 +1,4 @@
-@task2
+
 Feature: Task 2 scenarious
     Background: Navigate to url and click create Excercise log button
         Given User navigates to "ExcerTracker"
